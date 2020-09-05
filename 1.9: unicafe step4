@@ -1,15 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-const Statistic = ({text, value}) => {
-  return (
-    <>
-        <p>{text}</p>
-        <p>{value}</p>
-    </>
-  )
-}
-
 const Statistics = ({ good, neutral, bad }) => {
   const all = good+neutral+bad;
 if(all !== 0) {
@@ -45,7 +36,10 @@ const App = () => {
       <button onClick={() => setBad(bad + 1)}>bad</button>
   
         <h2>statistics</h2>
-        <Statistics good={good} neutral={neutral} bad={bad} />
+        
+        <p>good  {good}</p>
+        <p>neutral  {neutral}</p>
+        <p>bad   {bad}</p>
 
     </div>
   )
